@@ -12,6 +12,13 @@ class Grid extends React.Component {
   }
 
   render() {
+    const substr = (str, len) => {
+      if (str.length < len) {
+        return str;
+      }
+      return str.substr(0, len).trim() + '...';
+    }
+
     return <table>
       <thead>
         <tr>
@@ -35,7 +42,7 @@ class Grid extends React.Component {
                           {
                             b.current ? <strong>Current ({ b.number }): </strong> : <strong>{ b.number }: </strong>
                           }
-                          <a href={`https://github.com/${this.props.org}/${repo.name}/tree/${b.commit}`}>{ b.message.substr(0, 30) }</a>
+                          <a href={`https://github.com/${this.props.org}/${repo.name}/tree/${b.commit}`}>{ substr(b.message, 30) }</a>
                           {
                             b.finished_at ? <span> ({ moment(b.finished_at * 1000).toNow(true) } ago)</span> : <span> (Running)</span>
                           }
