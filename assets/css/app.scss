@@ -2,6 +2,10 @@ $color-primary: #005ea5;
 
 @import "milligram/src/milligram";
 
+h1 {
+  text-align: center;
+}
+
 table {
   th, td {
     vertical-align: top;
