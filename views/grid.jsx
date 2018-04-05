@@ -19,6 +19,10 @@ class Grid extends React.Component {
       return str.substr(0, len).trim() + '...';
     }
 
+    if (!this.props.repos || !this.props.environments) {
+      return null;
+    }
+
     return <table>
       <thead>
         <tr>

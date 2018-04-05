@@ -3,6 +3,7 @@ const request = require('r2');
 
 const Grid = require('./grid');
 const Loader = require('./loader');
+const ErrorMessage = require('./error-message');
 
 class Container extends React.Component {
 
@@ -31,11 +32,16 @@ class Container extends React.Component {
   }
 
   render() {
-    return (!this.state || this.state.loading) ? <Loader/> : <Grid
-      { ...this.state }
-      onPromote={ (r, e, n) => this.promote(r, e, n) }
-      onRevert={ (r, e, n) => this.revert(r, e, n) }
-      />
+    return (!this.state || this.state.loading) ? <Loader/> : <React.Fragment>
+      {
+        this.state.error && <ErrorMessage message={this.state.error} />
+      }
+      <Grid
+        { ...this.state }
+        onPromote={ (r, e, n) => this.promote(r, e, n) }
+        onRevert={ (r, e, n) => this.revert(r, e, n) }
+        />
+      </React.Fragment>
   }
 
 }
