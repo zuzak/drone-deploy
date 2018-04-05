@@ -4,12 +4,10 @@ const moment = require('moment');
 class Grid extends React.Component {
 
   promote(repo, env, number) {
-    console.log('promote', arguments);
     this.props.onPromote(repo, env, number);
   }
 
   revert(repo, env, number) {
-    console.log('revert', arguments);
     this.props.onRevert(repo, env, number);
   }
 
