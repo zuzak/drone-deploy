@@ -2,6 +2,12 @@
 
 ## Running
 
+Install dependencies:
+
+```
+npm install
+```
+
 Set the following environment variables:
 
 * `GITHUB_ORG`

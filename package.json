@@ -10,6 +10,7 @@
     "prebuild": "mkdir -p public",
     "build:css": "npm-sass assets/css/app.scss > public/app.css",
     "build:js": "webpack",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
