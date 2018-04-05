@@ -22,4 +22,4 @@ Start the server:
 npm start
 ```
 
-Visit [](http://localhost:3000).
+Visit http://localhost:3000.
