@@ -30,7 +30,7 @@ class Grid extends React.Component {
             {
               this.props.environments.map(env => {
                 return <td key={ repo.name + env }>
-                  <ul>
+                  <ol>
                     {
                       repo[env].map(b => <li key={ b.commit } className={`${b.status} ${b.current ? 'current' : 'old'}`}>
                         <span>
@@ -50,7 +50,7 @@ class Grid extends React.Component {
                         }
                       </li>)
                     }
-                  </ul>
+                  </ol>
                 </td>
               })
             }

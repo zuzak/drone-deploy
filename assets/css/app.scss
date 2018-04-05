@@ -1,6 +1,6 @@
-$color-primary:#005ea5 !default;
+$color-primary: #005ea5;
 
-@import "milligram";
+@import "milligram/src/milligram";
 
 table {
   th, td {
@@ -19,6 +19,9 @@ table {
     }
     &.running {
       background: #ff6;
+    }
+    &.failure {
+      background: #ffeded;
     }
   }
 }
