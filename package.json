@@ -2,7 +2,7 @@
   "name": "drone-deploy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/server.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon -r dotenv/config index.js",
@@ -11,6 +11,7 @@
     "build:css": "npm-sass assets/css/app.scss > public/app.css",
     "build:js": "webpack",
     "postinstall": "npm run build",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
