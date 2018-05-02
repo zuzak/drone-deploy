@@ -16,6 +16,11 @@ Set the following environment variables:
 * `DRONE_TOKEN`
 * `DEPLOY_ENVIRONMENTS` - comma separated list of environment names - defaults to `dev,preprod,prod`
 
+Do an initial build of the assets:
+```
+npm run-script build
+```
+
 Start the server:
 
 ```
